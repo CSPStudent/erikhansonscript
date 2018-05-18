@@ -1,3 +1,15 @@
-fsadjlfkjsdfkl'a
-weest
+#!/bin/bash
+for rpi  in 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19
+do
+ 	ping -c 1 -w 1 rpi$rpi >/dev/null
+	if [ $? -ne 0 ]
+	then
+	echo “rpi$rpi Dead”
+	else 
+	echo “rpi$rpi Alive”
+	fi
+done
+
+
+
 
